@@ -159,7 +159,9 @@
 
       clouds.forEach(cloud => {
         cloud.x -= cloud.speed;
-        if (cloud.x < -100) {
+        const pixelSize = 3; // same as in drawCloud
+        const cloudPixelWidth = 26; // approximate max x index in cloud shape
+        if (cloud.x < -cloudPixelWidth * pixelSize * cloud.scale) {
           cloud.x = canvas.width + 60;
           cloud.y = Math.random() * canvas.height;
           cloud.scale = 2.5 + Math.random() * 1.5;
