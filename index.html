@@ -73,7 +73,7 @@
 
     let isHolding = false;
     const pipes = [];
-    let pipeInterval = 2000;
+    let pipeInterval = 2500;
     let lastPipeTime = Date.now();
     let score = 0;
     let highScore = parseInt(localStorage.getItem('highScore')) || 0;
@@ -242,7 +242,7 @@
       document.getElementById('score').innerText = `Score: 0`;
       
       const firstPipe = createPipe();
-      firstPipe.x = canvas.width - firstPipe.width - 70;  // Shift it 10px inside the canvas immediately
+      firstPipe.x = canvas.width - firstPipe.width - 50;  // Shift it 10px inside the canvas immediately
       pipes.push(firstPipe);
 
       lastPipeTime = Date.now();
