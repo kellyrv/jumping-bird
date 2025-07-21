@@ -73,7 +73,7 @@
 
     let isHolding = false;
     const pipes = [];
-    let pipeInterval = 1800;
+    let pipeInterval = 2000;
     let lastPipeTime = Date.now();
     let score = 0;
     let highScore = parseInt(localStorage.getItem('highScore')) || 0;
@@ -189,7 +189,7 @@
 
       for (let i = pipes.length - 1; i >= 0; i--) {
         const pipe = pipes[i];
-        pipe.x -= 3.5;
+        pipe.x -= 2.5;
         drawPipe(pipe);
 
         const hitboxX = bird.x + 15;
@@ -242,7 +242,7 @@
       document.getElementById('score').innerText = `Score: 0`;
       
       const firstPipe = createPipe();
-      firstPipe.x = canvas.width - firstPipe.width - 10;  // Shift it 10px inside the canvas immediately
+      firstPipe.x = canvas.width - firstPipe.width - 70;  // Shift it 10px inside the canvas immediately
       pipes.push(firstPipe);
 
       lastPipeTime = Date.now();
