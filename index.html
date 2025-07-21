@@ -189,7 +189,7 @@
 
       for (let i = pipes.length - 1; i >= 0; i--) {
         const pipe = pipes[i];
-        pipe.x -= 2.5;
+        pipe.x -= 2; // initially 3.5
         drawPipe(pipe);
 
         const hitboxX = bird.x + 15;
