@@ -224,7 +224,7 @@
       } else {
         ctx.fillStyle = 'orange';
         ctx.font = '20px "Press Start 2P"';
-        ctx.fillText('Game Over', 100, 300);
+        ctx.fillText('Whoops, you died! Game Over', 100, 300);
         if (score > highScore) {
           highScore = score;
           localStorage.setItem('highScore', highScore);
